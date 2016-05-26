@@ -1,0 +1,212 @@
+$width-small:  400px;
+$width-medium: 760px;
+$width-large:  1200px;
+
+@mixin custom-responsive($width) {
+  @if $width == wide-screens {
+    @media only screen and (max-width: $width-large) { @content; }
+  }
+  @else if $width == medium-screens {
+    @media only screen and (max-width: $width-medium) { @content; }
+  }
+  @else if $width == small-screens {
+    @media only screen and (max-width: $width-small) { @content; }
+  }
+}
+// @include responsive(wide-screens) { width: 80%; }
+@mixin custom-retinize($file, $type, $width, $height) {
+  background-image: url('../images/' + $file + '.' + $type);
+
+  @media (-webkit-min-device-pixel-ratio: 1.5),
+         (min--moz-device-pixel-ratio: 1.5),
+         (-o-min-device-pixel-ratio: 3/2),
+         (min-device-pixel-ratio: 1.5),
+         (min-resolution: 1.5dppx) {
+    & {
+      background-image: url('../images/' + $file + '.' + $type);
+      -webkit-background-size: $width $height;
+         -moz-background-size: $width $height;
+              background-size: $width $height;
+    }
+  }
+}
+// how to use @include retinize('icon-dribbble', 'png', 24px, 24px);
+@mixin custom-background-body($file, $type) {
+    background: url('../images/' + $file + '.' + $type) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+// how to use @include retinize('icon-dribbble', 'png', 24px, 24px);
+@mixin custom-rounded($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+          border-radius: $radius;
+}
+@mixin custom-shadow($x, $y, $z, $blur, $color) {
+  -webkit-box-shadow: $x $y $z $blur $color;
+     -moz-box-shadow: $x $y $z $blur $color;
+          box-shadow: $x $y $z $blur $color;
+}
+@mixin custom-shadow-inset($x, $y, $z, $blur, $color) {
+  -webkit-box-shadow: inset $x $y $z $blur $color;
+     -moz-box-shadow: inset $x $y $z $blur $color;
+          box-shadow: inset $x $y $z $blur $color;
+}
+@mixin custom-border-radius($radius:0) {
+    @include border-top-radius($radius);
+    @include border-bottom-radius($radius);
+    @include border-left-radius($radius);
+    @include border-right-radius($radius);
+}
+@mixin custom-transition($property) {
+  -webkit-transition: $property .2s ease;
+     -moz-transition: $property .2s ease;
+       -o-transition: $property .2s ease;
+          transition: $property .2s ease;
+}
+@mixin custom-box-sizing($box-sizing:border-box) {
+  -webkit-box-sizing: $box-sizing;
+     -moz-box-sizing: $box-sizing;
+          box-sizing: $box-sizing;
+}
+@mixin custom-linear-gradient($from, $to) {
+  /* Fallback for sad browsers */
+  background-color: $to;
+  /* Mozilla Firefox */
+  background-image:-moz-linear-gradient($from, $to);
+  /* Opera */
+  background-image:-o-linear-gradient($from, $to);
+  /* WebKit (Chrome 11+) */
+  background-image:-webkit-gradient(linear, left top, left bottom, color-stop(0, $from), color-stop(1, $to));
+  /* WebKit (Safari 5.1+, Chrome 10+) */
+  background-image: -webkit-linear-gradient($from, $to);
+  /* IE10 */
+  background-image: -ms-linear-gradient($from, $to);
+  /* W3C */
+  backgrouncd-image: linear-gradient($from, $to);
+}
+@mixin text-highlight-selection($background, $color) {
+    ::selection { background: $background; color: $color; text-shadow: none; }
+    ::-webkit-selection{ background: $background; color: $color; text-shadow: none; }
+    ::-moz-selection{ background: $background; color: $color; text-shadow: none; }
+}
+@mixin gradient-striped($color: rgba(255,255,255,.15), $angle: 45deg) {
+    background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(.25, $color), color-stop(.25, transparent), color-stop(.5, transparent), color-stop(.5, $color), color-stop(.75, $color), color-stop(.75, transparent), to(transparent));
+    background-image: -webkit-linear-gradient($angle, $color 25%, transparent 25%, transparent 50%, $color 50%, $color 75%, transparent 75%, transparent);
+    background-image: -moz-linear-gradient($angle, $color 25%, transparent 25%, transparent 50%, $color 50%, $color 75%, transparent 75%, transparent);
+    background-image: linear-gradient($angle, $color 25%, transparent 25%, transparent 50%, $color 50%, $color 75%, transparent 75%, transparent);
+}
+@mixin transitionDuration ($duration) {
+    transition-duration: $duration;
+    -webkit-transition-duration: $duration;
+}
+
+@mixin easingTimingFunction () {
+    -webkit-transition: all 0 cubic-bezier(0.250, 0.460, 0.450, 0.940);
+    -moz-transition: all 0 cubic-bezier(0.250, 0.460, 0.450, 0.940);
+    -ms-transition: all 0 cubic-bezier(0.250, 0.460, 0.450, 0.940);
+    -o-transition: all 0 cubic-bezier(0.250, 0.460, 0.450, 0.940);
+    transition: all 0 cubic-bezier(0.250, 0.460, 0.450, 0.940); /* easeOutQuad */
+
+    -webkit-transition-timing-function: cubic-bezier(0.250, 0.460, 0.450, 0.940);
+    -moz-transition-timing-function: cubic-bezier(0.250, 0.460, 0.450, 0.940);
+    -ms-transition-timing-function: cubic-bezier(0.250, 0.460, 0.450, 0.940);
+    -o-transition-timing-function: cubic-bezier(0.250, 0.460, 0.450, 0.940);
+    transition-timing-function: cubic-bezier(0.250, 0.460, 0.450, 0.940); /* easeOutQuad */
+}
+
+@mixin bouncyTimingFunction () {
+    -webkit-transition: all 0 cubic-bezier(0.175, 0.885, 0.320, 1); /* older webkit */
+    -webkit-transition: all 0 cubic-bezier(0.175, 0.885, 0.320, 1.275);
+    -moz-transition: all 0 cubic-bezier(0.175, 0.885, 0.320, 1.275);
+    -ms-transition: all 0 cubic-bezier(0.175, 0.885, 0.320, 1.275);
+    -o-transition: all 0 cubic-bezier(0.175, 0.885, 0.320, 1.275);
+    transition: all 0 cubic-bezier(0.175, 0.885, 0.320, 1.275); /* easeOutBack */
+
+    -webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.450, 1); /* older webkit */
+    -webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.450, 1.595);
+    -moz-transition-timing-function: cubic-bezier(0.175, 0.885, 0.450, 1.595);
+    -ms-transition-timing-function: cubic-bezier(0.175, 0.885, 0.450, 1.595);
+    -o-transition-timing-function: cubic-bezier(0.175, 0.885, 0.450, 1.595);
+    transition-timing-function: cubic-bezier(0.175, 0.885, 0.450, 1.595); /* custom */
+}
+
+@mixin easingOutQuadTimingFunction () {
+    -webkit-transition: all 0 cubic-bezier(0.250, 0.460, 0.450, 0.940);
+    -moz-transition: all 0 cubic-bezier(0.250, 0.460, 0.450, 0.940);
+    -ms-transition: all 0 cubic-bezier(0.250, 0.460, 0.450, 0.940);
+    -o-transition: all 0 cubic-bezier(0.250, 0.460, 0.450, 0.940);
+    transition: all 0 cubic-bezier(0.250, 0.460, 0.450, 0.940); /* easeOutQuad */
+
+    -webkit-transition-timing-function: cubic-bezier(0.250, 0.460, 0.450, 0.940);
+    -moz-transition-timing-function: cubic-bezier(0.250, 0.460, 0.450, 0.940);
+    -ms-transition-timing-function: cubic-bezier(0.250, 0.460, 0.450, 0.940);
+    -o-transition-timing-function: cubic-bezier(0.250, 0.460, 0.450, 0.940);
+    transition-timing-function: cubic-bezier(0.250, 0.460, 0.450, 0.940); /* easeOutQuad */
+}
+
+@mixin transform ($value) {
+    transform: $value;
+    -ms-transform: $value;
+    -webkit-transform: $value;
+}
+
+@mixin custom-animation-duration($duration) {
+    -webkit-animation-duration: $duration;
+    -moz-animation-duration: $duration;
+    -o-animation-duration: $duration;
+    animation-duration: $duration;
+}
+
+@mixin prefixed($property, $value) {
+  @if $webkit == true {
+    -webkit-#{$property}: #{$value};
+  }
+
+  @if $moz == true {
+    -moz-#{$property}: #{$value};
+  }
+
+  @if $ms == true {
+    -ms-#{$property}: #{$value};
+  }
+
+  @if $o == true {
+    -o-#{$property}: #{$value};
+  }
+
+  #{$property}: #{$value};
+}
+
+// prefix keyframes
+@mixin keyframes($name) {
+  @if $webkit == true {
+    @-webkit-keyframes #{$name} {
+      @content;
+    }
+  }
+
+  @if $moz == true {
+    @-moz-keyframes #{$name} {
+      @content;
+    }
+  }
+
+  @if $ms == true {
+    @-ms-keyframes #{$name} {
+      @content;
+    }
+  }
+
+  @if $o == true {
+    @-o-keyframes #{$name} {
+      @content;
+    }
+  }
+
+  @keyframes #{$name} {
+    @content;
+  }
+}

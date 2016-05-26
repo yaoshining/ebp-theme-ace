@@ -1,0 +1,33 @@
+{
+  "name": "ebp-theme-ace",
+  "description": "An ace theme style for ebp platform.",
+  "main": "index.js",
+  "authors": [
+    "yaoshining"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "ebp",
+    "ace",
+    "theme",
+    "scss",
+    "less"
+  ],
+  "homepage": "https://github.com/yaoshining/ebp-theme-ace",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "app",
+    "config",
+    "package.json",
+    "webpack.config.js"
+  ],
+  "dependencies": {
+    "jquery": "^2.2.4",
+    "bootstrap-sass": "^3.3.6",
+    "font-awesome": "^4.6.3"
+  }
+}
