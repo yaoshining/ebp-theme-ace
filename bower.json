@@ -1,7 +1,7 @@
 {
   "name": "ebp-theme-ace",
   "description": "An ace theme style for ebp platform.",
-  "main": "index.js",
+  "main": "assets/sass/_core.scss",
   "authors": [
     "yaoshining"
   ],
