@@ -251,8 +251,10 @@ $dropdown-light-blue: #ECF3F9;
 
 $sidebar-width: 190px;
 $sidebar-min-width: 43px;//sidebar minimum width
+$sidebar-sm-width: 80px;
 $sidebar-compact-width: 105px;
 $nav-item-height: 39px;
+$nav-item-sm-height: 60px; //nav item height in small mode
 
 $sidebar-toggler-line-1: #87B87F;
 $sidebar-toggler-line-2: #6FB3E0;
@@ -299,3 +301,12 @@ $item-list-black-border: #505050;
 $item-list-grey-border: #A0A0A0;
 $item-list-brown-border:brown;
 $item-list-default-border:$btn-default;
+
+//footer
+$footer-min-height: 20px;
+$footer-bg-color: #438EB9;
+$footer-color: #ffffff;
+
+//side-menu
+$side-menu-width: 230px;
+$side-menu-bg-color: #EAEDF1;

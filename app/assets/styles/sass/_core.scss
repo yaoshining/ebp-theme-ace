@@ -13,6 +13,7 @@
 @import 'forms';
 @import 'navbar';
 @import 'sidebar';
+@import "footer";
 @import 'colors';
 @import 'scroll';
 @import 'typography';
@@ -33,6 +34,7 @@
 @import "others";
 
 @import "skins/no-skin";
+@import "skins/dark-skin";
 /***************************  login begin  *********************************/
 .login-container {
   width: 375px;
@@ -171,6 +173,14 @@ button {
         outline: none;
     }
 }
+
+.page-content {
+  background-color: #fff;
+  position: static;
+  margin: 0;
+  padding: 8px 20px 24px;
+}
+
 .page-content > .abs-content {
     position: absolute;
     top: $navbar-min-height + $breadcrumb-height;

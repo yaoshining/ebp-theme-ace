@@ -401,6 +401,70 @@ $sidebar-toggler-background: #444;
 
     }
 
+    //menu-sm
+    @mixin menu_sm_no_skin() {
+        .nav-list > li > a {
+            > .menu-text {
+                background-color: $menusm-text-background;
+                @include box-shadow($menusm-shadow1);
+                border-color: $menusm-border;
+            }
+            &.dropdown-toggle > .menu-text {
+                @include box-shadow($menusm-shadow2);
+            }
+        }
+        .nav-list > li {
+            &.active > .submenu {
+                border-left-color: $submenu-border-active;
+            }
+        }
+        .nav-list > li > .submenu {
+            background-color: $submenu-background;
+            border: 1px solid $menusm-border;
+            border-top-color: lighten($menusm-border , 10%);
+            @include box-shadow($menusm-shadow2);
+        }
+
+        //-li > .arrow
+        .nav-list > li {
+            > .arrow:after {
+                border-right-color: $menusm-text-background;
+                -moz-border-right-colors: $menusm-text-background;
+
+                border-width: 8px 8px 8px 0;
+                left: -8px;
+            }
+            > .arrow:before {
+                border-width: 8px 8px 8px 0;
+                left: -9px;
+            }
+
+            &.active > .arrow:before {
+                border-right-color: darken($submenu-border-active , 11%);
+                -moz-border-right-colors: darken($submenu-border-active , 11%);
+            }
+            &.active > a > .menu-text {
+                border-left-color: $submenu-border-active;
+            }
+        }
+
+
+        .sidebar-shortcuts-large {
+            background-color: $submenu-background;
+            @include box-shadow($menusm-shadow1);
+            border-color: $menusm-border;
+        }
+        .sidebar-toggle > .#{$icon} {
+            border-color: darken($sidebar-toggle-icon-border, 4%);
+        }
+    }
+
+    @if($enable-sidebar-collapse == true) {
+        .sidebar.menu-sm {
+            @include menu_sm_no_skin();
+        }
+    }
+
     //horizontal
     @if($enable-horizontal-menu == true) {
         @media only screen and (min-width: $grid-float-breakpoint) {

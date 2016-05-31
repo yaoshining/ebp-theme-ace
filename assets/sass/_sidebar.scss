@@ -12,7 +12,6 @@
 
     padding-left: 0;//override .nav-collapse
     padding-right: 0;
-
     &:before {
         content: "";
         display: block;
@@ -27,6 +26,9 @@
         border: inherit;
     }
 
+    & + .main-content {
+        margin-left: $sidebar-width;
+    }
 }
 
 .nav-list {
@@ -359,7 +361,8 @@ no_such_element:-o-prefocus, .nav-list > li > a > .menu-icon {
 //minimized sidebar mode
 @import "sidebar/min";
 
-
+//small sidebar mode
+@import "sidebar/sm";
 
 //horizontal sidebar style
 @import "sidebar/horizontal";

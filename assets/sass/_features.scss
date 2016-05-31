@@ -72,6 +72,9 @@ $enable-timeline:						true;//Timeline
 $enable-timeline-style-2:				true;//Timeline 2nd Style
 $enable-login-page:						true;//Login page
 
+//~Footer Options
+$enable-footer:                         true;
+
 // Browser Prefixes - Which CSS prefixes should be used?
 $webkit: true !default;
 $moz: false !default;

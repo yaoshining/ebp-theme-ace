@@ -16,16 +16,17 @@ module.exports = function(_path) {
 
         entry: {
             vendor: _path + '/app/src/index.vendor.js',
-            app: _path + '/app/src/index.bootstrap.js'
+            app: _path + '/app/src/index.bootstrap.jsx'
         },
 
         output: {
             path: 'dist',
-            // filename: '[name].js',
+            filename: '[name].js',
             publicPath: '/'
         },
 
         resolve: {
+            extensions: ['', '.js', '.jsx'],
             modulesDirectories: ['node_modules', 'bower_components'],
             alias: {
                 _appRoot:     path.join(_path, 'app', 'src'),
@@ -36,7 +37,7 @@ module.exports = function(_path) {
 
         module: {
             loaders: [{
-                test: /\.js$/,
+                test: /\.(js|jsx)$/,
                 exclude: [
                     path.resolve(_path, 'node_modules'),
                     path.resolve(_path, 'bower_components')
@@ -68,7 +69,8 @@ module.exports = function(_path) {
             new ExtractTextPlugin('assets/styles/css/[name]' + (DEVELOPMENT ? '' : '.[chunkhash]') + '.css', { allChunks: true }),
             new HtmlWebpackPlugin({
                 filename: 'index.html',
-                template: path.join(_path, 'app', 'tpl-index.html')
+                template: path.join(_path, 'app', 'tpl-index.html'),
+                inject: 'head'
             })
         ]
     };

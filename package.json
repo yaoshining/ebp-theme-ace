@@ -30,6 +30,7 @@
     "babel-plugin-add-module-exports": "^0.2.1",
     "babel-plugin-transform-runtime": "^6.9.0",
     "babel-preset-es2017": "^1.4.0",
+    "babel-preset-react": "^6.5.0",
     "bootstrap-loader": "^1.0.10",
     "clean-webpack-plugin": "^0.1.9",
     "copy-webpack-plugin": "^3.0.0",
@@ -50,9 +51,13 @@
   },
   "dependencies": {
     "bootstrap-sass": "^3.3.6",
+    "classnames": "^2.2.5",
     "font-awesome": "^4.6.3",
     "jquery": "^2.2.4",
-    "lodash": "^4.13.1"
+    "lodash": "^4.13.1",
+    "react": "^15.1.0",
+    "react-dom": "^15.1.0",
+    "react-router": "^2.4.1"
   },
   "engines": {
     "node": ">=0.12.0"
