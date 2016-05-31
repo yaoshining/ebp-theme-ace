@@ -1,0 +1,51 @@
+$dark-skin-sidebar-bg-color: #293038;
+$dark-skin-sidebar-color: #ffffff;
+.dark-skin {
+  .sidebar {
+    .nav-list {
+
+      li > a {
+        border-color: $dark-skin-sidebar-bg-color;
+        background-color: #3f4955;
+        color: $dark-skin-sidebar-color;
+      }
+
+      & > li {
+        & > a {
+          background-color: $dark-skin-sidebar-bg-color;
+          font-weight: normal;
+        }
+
+        &:hover {
+
+          & > a {
+            background-color: #37424f;
+          }
+
+          &:before {
+            display: none;
+          }
+        }
+
+        &.active {
+          & > a {
+            background-color: #09c;
+          }
+        }
+      }
+    }
+
+    &:before {
+      background-color: $dark-skin-sidebar-bg-color;
+    }
+
+  }
+
+  .sidebar-toggle {
+    color: #546273;
+    border-top-width: 1px;
+    & > .ebp-icon {
+      background-color: #e6e6e6;
+    }
+  }
+}
