@@ -52,9 +52,9 @@ const menus = {
 };
 
 const sidebarStateClassNames = [
-    '',
     'menu-sm',
-    'menu-min'
+    'menu-min',
+    ''
 ];
 
 function onSidebarToggle() {

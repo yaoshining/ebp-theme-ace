@@ -34,16 +34,11 @@
       width: $side-menu-width;
       z-index: 2;
       background-color: $side-menu-bg-color;
-      & + .breadcrumbs {
-        margin-left: $side-menu-width;
-        & + .page-content {
-          margin-left: $side-menu-width;
-        }
-      }
     }
 
     .page-content {
       height: calc(100% - 41px);
+      overflow: hidden;
     }
 
   }

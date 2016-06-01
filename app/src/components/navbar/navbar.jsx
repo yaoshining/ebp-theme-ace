@@ -20,8 +20,8 @@ export default () => (
             </div>
             <div className="navbar-buttons pull-right" role="navigation">
                 <ul className="nav ebp-nav">
-                    <li className="grey" dropdown>
-                        <a className="dropdown-toggle" dropdown-toggle href="javascript:void(0)">
+                    <li className="grey">
+                        <a className="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0)">
                             <i className="ebp-icon fa fa-tasks" />
                             <span className="badge badge-gray">4</span>
                         </a>
@@ -39,8 +39,10 @@ export default () => (
                                                 <span className="pull-right">65%</span>
                                             </div>
 
-                                            <progressbar className="progress-mini" value="65">
-                                            </progressbar>
+                                            <div className="progress progress-mini">
+                                                <div className="progress-bar" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style={{width: '60%'}}>
+                                                </div>
+                                            </div>
                                         </a>
                                     </li>
                                     <li>
@@ -50,8 +52,10 @@ export default () => (
                                                 <span className="pull-right">35%</span>
                                             </div>
 
-                                            <progressbar className="progress-mini" type="danger" value="35">
-                                            </progressbar>
+                                            <div className="progress progress-mini">
+                                                <div className="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100" style={{width: '35%'}}>
+                                                </div>
+                                            </div>
                                         </a>
                                     </li>
                                     <li>
@@ -61,8 +65,10 @@ export default () => (
                                                 <span className="pull-right">15%</span>
                                             </div>
 
-                                            <progressbar className="progress-mini" type="warning" value="15">
-                                            </progressbar>
+                                            <div className="progress progress-mini">
+                                                <div className="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100" style={{width: '15%'}}>
+                                                </div>
+                                            </div>
                                         </a>
                                     </li>
                                     <li>
@@ -72,8 +78,10 @@ export default () => (
                                                 <span className="pull-right">90%</span>
                                             </div>
 
-                                            <progressbar className="progress-mini progress-striped active" type="success" value="90">
-                                            </progressbar>
+                                            <div className="progress progress-mini progress-striped active">
+                                                <div className="progress-bar progress-bar-success" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style={{width: '90%'}}>
+                                                </div>
+                                            </div>
                                         </a>
                                     </li>
                                 </ul>
@@ -86,8 +94,8 @@ export default () => (
                             </li>
                         </ul>
                     </li>
-                    <li className="purple" dropdown>
-                        <a className="dropdown-toggle" dropdown-toggle href="javascript:void(0)">
+                    <li className="purple">
+                        <a className="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0)">
                             <i className="ebp-icon fa fa-bell icon-animated-bell" />
                             <span className="badge badge-important">8</span>
                         </a>
@@ -147,8 +155,8 @@ export default () => (
                             </li>
                         </ul>
                     </li>
-                    <li className="green" dropdown>
-                        <a dropdown-toggle className="dropdown-toggle" href="javascript:void(0)">
+                    <li className="green">
+                        <a data-toggle="dropdown" className="dropdown-toggle" href="javascript:void(0)">
                             <i className="ebp-icon fa fa-envelope icon-animated-vertical" />
                             <span className="badge badge-success">5</span>
                         </a>
@@ -161,7 +169,7 @@ export default () => (
                                 <ul className="dropdown-menu dropdown-navbar">
                                     <li>
                                         <a href="#" className="clearfix">
-                                            <img src="images/avatars/avatar.png" className="msg-photo" alt="Alex's Avatar" />
+                                            <img src="http://114.215.109.39/ace/assets/avatars/avatar.png" className="msg-photo" alt="Alex's Avatar" />
                                             <span className="msg-body">
                                                 <span className="msg-title">
                                                     <span className="blue">Alex:</span>
@@ -177,7 +185,7 @@ export default () => (
                                     </li>
                                     <li>
                                         <a href="#" className="clearfix">
-                                            <img src="images/avatars/avatar3.png" className="msg-photo" alt="Susan's Avatar" />
+                                            <img src="http://114.215.109.39/ace/assets/avatars/avatar3.png" className="msg-photo" alt="Susan's Avatar" />
                                             <span className="msg-body">
                                                 <span className="msg-title">
                                                     <span className="blue">Susan:</span>
@@ -193,7 +201,7 @@ export default () => (
                                     </li>
                                     <li>
                                         <a href="#" className="clearfix">
-                                            <img src="images/avatars/avatar4.png" className="msg-photo" alt="Bob's Avatar" />
+                                            <img src="http://114.215.109.39/ace/assets/avatars/avatar4.png" className="msg-photo" alt="Bob's Avatar" />
                                             <span className="msg-body">
                                                 <span className="msg-title">
                                                     <span className="blue">Bob:</span>
@@ -209,7 +217,7 @@ export default () => (
                                     </li>
                                     <li>
                                         <a href="#" className="clearfix">
-                                            <img src="images/avatars/avatar2.png" className="msg-photo" alt="Kate's Avatar" />
+                                            <img src="http://114.215.109.39/ace/assets/avatars/avatar2.png" className="msg-photo" alt="Kate's Avatar" />
                                             <span className="msg-body">
                                                 <span className="msg-title">
                                                     <span className="blue">Kate:</span>
@@ -225,7 +233,7 @@ export default () => (
                                     </li>
                                     <li>
                                         <a href="#" className="clearfix">
-                                            <img src="images/avatars/avatar5.png" className="msg-photo" alt="Fred's Avatar" />
+                                            <img src="http://114.215.109.39/ace/assets/avatars/avatar5.png" className="msg-photo" alt="Fred's Avatar" />
                                             <span className="msg-body">
                                                 <span className="msg-title">
                                                     <span className="blue">Fred:</span>
@@ -249,9 +257,9 @@ export default () => (
                             </li>
                         </ul>
                     </li>
-                    <li className="light-blue" dropdown>
-                        <a dropdown-toggle className="dropdown-toggle" href="javascript:void(0)">
-                            <img className="nav-user-photo" src="images/avatars/user.jpg" />
+                    <li className="light-blue">
+                        <a data-toggle="dropdown" className="dropdown-toggle" href="javascript:void(0)">
+                            <img className="nav-user-photo" src="http://114.215.109.39/ace/assets/avatars/user.jpg" />
                             <span className="user-info">
                                 <small>Welcome,</small>
                                 Yao

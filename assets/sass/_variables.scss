@@ -39,7 +39,8 @@ $ebp-nav-white-opaque: rgba(255,255,255,0.8);
 $ebp-nav-dark-opaque: rgba(0,0,0,0.2);
 
 
-$navbar-min-height: 45px;//navbar's min-height
+$navbar-min-height: 45px!default;//navbar's min-height
+$navbar-background: #438EB9!default;//navbar background color
 $navbar-dropdown-width: 240px;
 $navbar-dropdown-shadow: 0 2px 4px rgba(30, 30, 100, 0.25);
 
@@ -303,8 +304,8 @@ $item-list-brown-border:brown;
 $item-list-default-border:$btn-default;
 
 //footer
-$footer-min-height: 20px;
-$footer-bg-color: #438EB9;
+$footer-min-height: 20px!default;
+$footer-bg-color: #438EB9!default;
 $footer-color: #ffffff;
 
 //side-menu
