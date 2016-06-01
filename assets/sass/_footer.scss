@@ -1,3 +1,6 @@
+.side-menu {
+  display: none;
+}
 @if($enable-footer == true) {
 
   .footer {
@@ -46,6 +49,7 @@
   .side-menu {
     overflow-x: hidden;
     overflow-y: auto;
+    display: block;
     .side-menu-title {
       height: 60px;
       background-color: #D9DEE4;

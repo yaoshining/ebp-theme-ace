@@ -240,88 +240,84 @@
 
     }
 
+    //task list
+    .item-list {
+        margin:0;
+        padding:0;
+        list-style:none;
 
+        > li {
+            padding:9px;
+            background-color:#FFF;
+            margin-top:-1px;
+            position:relative;
 
-}
-
-//task list
-.item-list {
-    margin:0;
-    padding:0;
-    list-style:none;
-
-    > li {
-        padding:9px;
-        background-color:#FFF;
-        margin-top:-1px;
-        position:relative;
-
-        &.selected {
-            color:#8090A0;
-            background-color:#F4F9FC;
-            label , .lbl {
-                text-decoration:line-through;
+            &.selected {
                 color:#8090A0;
+                background-color:#F4F9FC;
+                label , .lbl {
+                    text-decoration:line-through;
+                    color:#8090A0;
+                }
+            }
+            > .checkbox {
+                display:inline-block;
+            }
+            > label.inline {
+                display:inline-block;
+            }
+            label {
+                font-size: $baseFontSize;
+            }
+            .percentage {
+                font-size: $baseFontSize - 2;
+                font-weight: bold;
+                color: #777;
+            }
+
+            &.ui-sortable-helper {
+                cursor: move;
             }
         }
-        > .checkbox {
-            display:inline-block;
-        }
-        > label.inline {
-            display:inline-block;
-        }
-        label {
-            font-size: $baseFontSize;
-        }
-        .percentage {
-            font-size: $baseFontSize - 2;
-            font-weight: bold;
-            color: #777;
-        }
 
-        &.ui-sortable-helper {
-            cursor: move;
+    }
+
+    li[class*="item-"] {
+        border:1px solid #DDD;
+        border-left-width:3px;
+    }
+
+    @include item-list-color("item-orange",$item-list-orange-border);
+    @include item-list-color("item-orange2",$item-list-orange2-border);
+    @include item-list-color("item-red",$item-list-red-border);
+    @include item-list-color("item-red2",$item-list-red2-border);
+    @include item-list-color("item-green",$item-list-green-border);
+    @include item-list-color("item-green2",$item-list-green2-border);
+    @include item-list-color("item-blue",$item-list-blue-border);
+    @include item-list-color("item-blue2",$item-list-blue2-border);
+    @include item-list-color("item-blue3",$item-list-blue3-border);
+    @include item-list-color("item-pink",$item-list-pink-border);
+    @include item-list-color("item-purple",$item-list-purple-border);
+    @include item-list-color("item-black",$item-list-black-border);
+    @include item-list-color("item-grey",$item-list-grey-border);
+    @include item-list-color("item-brown",$item-list-brown-border);
+    @include item-list-color("item-default",$item-list-default-border);
+
+    //when dragging
+    .ui-sortable-placeholder  , .ui-sortable-helper {
+        & , & > a {
+            cursor:move !important;
         }
     }
 
-}
 
 
 
-li[class*="item-"] {
-    border:1px solid #DDD;
-    border-left-width:3px;
-}
-
-@include item-list-color("item-orange",$item-list-orange-border);
-@include item-list-color("item-orange2",$item-list-orange2-border);
-@include item-list-color("item-red",$item-list-red-border);
-@include item-list-color("item-red2",$item-list-red2-border);
-@include item-list-color("item-green",$item-list-green-border);
-@include item-list-color("item-green2",$item-list-green2-border);
-@include item-list-color("item-blue",$item-list-blue-border);
-@include item-list-color("item-blue2",$item-list-blue2-border);
-@include item-list-color("item-blue3",$item-list-blue3-border);
-@include item-list-color("item-pink",$item-list-pink-border);
-@include item-list-color("item-purple",$item-list-purple-border);
-@include item-list-color("item-black",$item-list-black-border);
-@include item-list-color("item-grey",$item-list-grey-border);
-@include item-list-color("item-brown",$item-list-brown-border);
-@include item-list-color("item-default",$item-list-default-border);
-
-//when dragging
-.ui-sortable-placeholder  , .ui-sortable-helper {
-    & , & > a {
-        cursor:move !important;
+    @media only screen and (max-width: $screen-xs) {
+        .itemdiv.memberdiv {
+            float: none;
+            width: auto;
+        }
     }
-}
 
-
-
-
-@media only screen and (max-width: $screen-xs) {
-    .itemdiv.memberdiv {
-        float: none;
-        width: auto;
-    }
 }

@@ -22,17 +22,17 @@ $enable-top-menu:						true;//Menu and Form inside navbar
 $enable-highlight-active:				true;//Alternative Active Menu Item Highlight
 
 //~Breadcrumbs Options
-$enable-breadcrumbs:					true;//Breadcrumbs
-$enable-fixed-breadcrumbs:				true;//Fixed Breadcrumbs							+$enable-breadcrumbs
-$enable-search-box:						true;//Search Box Inside Breadcrumbs				+@enable-breadcrumbs
+$enable-breadcrumbs:					true!default;//Breadcrumbs
+$enable-fixed-breadcrumbs:				true!default;//Fixed Breadcrumbs							+$enable-breadcrumbs
+$enable-search-box:						true!default;//Search Box Inside Breadcrumbs				+@enable-breadcrumbs
 
 //~Form Elements
-$enable-checkbox:						true;//Custom CSSx Checkbox and Radio Elements
+$enable-checkbox:						true!default;//Custom CSSx Checkbox and Radio Elements
 $enable-checkbox-asp:					false;//ASP Friendly checkboxes					        +$enable-checkbox
-$enable-switch:							true;//Custom Switch (On/Off) Elements				+$enable-checkbox
-$enable-switch-style-4:					true;//Switch Elements Style #4 #5 					+$enable-switch
-$enable-switch-style-6:					true;//Switch Elements Style #6 					+$enable-switch
-$enable-switch-style-7:					true;//Switch Elements Style #7 					+@enable-switch
+$enable-switch:							true!default;//Custom Switch (On/Off) Elements				+$enable-checkbox
+$enable-switch-style-4:					true!default;//Switch Elements Style #4 #5 					+$enable-switch
+$enable-switch-style-6:					true!default;//Switch Elements Style #6 					+$enable-switch
+$enable-switch-style-7:					true!default;//Switch Elements Style #7 					+@enable-switch
 
 //~Pages
 $enable-items:							true;//Dashboard's Item List (Conversation/Member/Task List)
@@ -43,9 +43,9 @@ $enable-image-gallery:					true;//Image Gallery
 $enable-profile:						true;//Profile Page
 $enable-inbox:							true;//Inbox Page
 $enable-inbox-tabless:					true;//Tabless Inbox
-$enable-timeline:						true;//Timeline
-$enable-timeline-style-2:				true;//Timeline 2nd Style
-$enable-login-page:						true;//Login page
+$enable-timeline:						true!default;//Timeline
+$enable-timeline-style-2:				true!default;//Timeline 2nd Style
+$enable-login-page:						true!default;//Login page
 
 //~Navbar Options
 $enable-navbar-dropdowns:				true;//Navbar User Info Dropdown Menu Options, etc ...
@@ -56,11 +56,11 @@ $enable-dropdown-colors:				true;//Dropdown Menu Different Colors
 $enable-simple-color-picker:			true;//Simple Color Picker Dropdown Element
 
 //~Widgets
-$enable-widgets:						true;//Widget Boxes
-$enable-widget-colors:					true;//Widget Boxes Different Colors 				+@enable-widgets
+$enable-widgets:						true!default;//Widget Boxes
+$enable-widget-colors:					true!default;//Widget Boxes Different Colors 				+@enable-widgets
 
 //~Pages
-$enable-items:							true;//Dashboard's Item List (Conversation/Member/Task List)
+$enable-items:							true!default;//Dashboard's Item List (Conversation/Member/Task List)
 $enable-pricing:						true;//Pricing Boxes
 $enable-invoice:						true;//Invoice Page
 $enable-image-gallery:					true;//Image Gallery
@@ -68,12 +68,26 @@ $enable-image-gallery:					true;//Image Gallery
 $enable-profile:						true;//Profile Page
 $enable-inbox:							true;//Inbox Page
 $enable-inbox-tabless:					true;//Tabless Inbox
-$enable-timeline:						true;//Timeline
-$enable-timeline-style-2:				true;//Timeline 2nd Style
-$enable-login-page:						true;//Login page
+$enable-timeline:						true!default;//Timeline
+$enable-timeline-style-2:				true!default;//Timeline 2nd Style
+$enable-login-page:						true!default;//Login page
+
+//~tabs & accordion
+$enable-tabs:							true!default;  //Tabs
+$enable-accordion:					    true!default;  //Accordion
 
 //~Footer Options
-$enable-footer:                         true;
+$enable-footer:                         true!default;
+
+//ebp-grid
+$enable-ebp-grid:                       true!default;
+
+//infobox
+$enable-infobox:                        true!default;
+
+//plugins
+$enable-plugin-nestable-list:           true!default;
+$enable-plugin-treeview:			    true!default;//Treeview
 
 // Browser Prefixes - Which CSS prefixes should be used?
 $webkit: true !default;

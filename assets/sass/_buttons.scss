@@ -2,6 +2,12 @@
 @import "variables";
 @import "fonts";
 //@import "../../bower_components/Buttons/scss/buttons";
+button {
+    &:focus {
+        outline: none;
+    }
+}
+
 .btn {
     display: inline-block;
     color: #FFF!important;
